@@ -18,12 +18,13 @@ end
 
 def find_the_cheese(array)
   cheese_types = ["cheddar", "gouda", "camembert"]
-  i = 0
-  while i < array.size do
-    if array.include?(cheese_types[i])
-      return cheese_types[i]
-    else
-    end
-    i += 1
-  end
+  # i = 0
+  # while i < array.size do
+  #   if array.include?(cheese_types[i])
+  #     return cheese_types[i]
+  #   else
+  #   end
+  #   i += 1
+  # end
+  array.detect {|maybe cheese| cheese_types.include?(maybe cheese)}
 end
